@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Areksoft Technologies</title>
+</head>
+
+<body>
+  <!-- ================== Navigation Start =================== -->
+  <div class="navigation flex items-center justify-between">
+    <div class="navigation-left">
+      <a href="#"><img src="Images/logo/Main-logo.png" alt=""></a>
+    </div>
+
+    <div class="navigation-right flex">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Product</a>
+      <a href="#">Service</a>
+      <a href="#">Works</a>
+      <a href="#">Training</a>
+      <a href="#">Contact</a>
+      <a href="#">Support</a>
+    </div>
+
+    <div class="nav-img">
+      <img src="Images/logo/menu-btn.png" alt="">
+    </div>
+  </div>
+
+  <!-- ------------------Navigation Slider Start --------------------->
+  <!-- Slider Wrapper -->
+  <div class="slider-wrapper">
+    <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+    <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+    <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+    <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+
+    <!-- Slider Pagination -->
+    <div class="slider-pagination">
+      <label for="slider_1" class="page1"></label>
+      <label for="slider_2" class="page2"></label>
+      <label for="slider_3" class="page3"></label>
+      <label for="slider_4" class="page4"></label>
+    </div>
+
+    <!-- Slider #1 -->
+    <div class="slider flex items-center justify-between flex-wrap slide-1">
+      <div class="slider-content">
+        <h2>We Build Enterprise Applications</h2>
+        <h4>Standard, Secure and Scalable</h4>
+        <button type="button" class="slider-btn" name="button">Get Started</button>
+      </div>
+      <div class="img-wrapper flex items-center justify-center">
+        <img src="images/img1.png" alt="">
+      </div>
+    </div>
+
+    <!-- Slider #2 -->
+    <div class="slider flex items-center justify-between slide-2">
+      <div class="slider-content">
+        <h2>We Build Web and Android Applications</h2>
+        <h4>Standard, Secure and Scalable</h4>
+        <button type="button" class="slider-btn" name="button">Get Started</button>
+      </div>
+      <div class="img-wrapper">
+        <img src="images/img2.png" alt="">
+      </div>
+    </div>
+
+    <!-- Slider #3 -->
+    <div class="slider flex items-center justify-between slide-3">
+      <div class="slider-content">
+        <h2>We Make Job Portals</h2>
+        <h4>Standard, Secure and Scalable</h4>
+        <button type="button" class="slider-btn" name="button">Get Started</button>
+      </div>
+      <div class="img-wrapper">
+        <img src="images/img3.png" alt="">
+      </div>
+    </div>
+
+    <!-- Slider #4 -->
+    <div class="slider flex items-center justify-between slide-4">
+      <div class="slider-content">
+        <h2>Get an Enterprise Level E-Commerce website</h2>
+        <h4>Standard, Secure and Scalable</h4>
+        <button type="button" class="slider-btn" name="button">Get Started</button>
+      </div>
+      <div class="img-wrapper">
+        <img src="images/img4.png" alt="">
+      </div>
+    </div>
+
+    <!-- ----------------------- Navigation Slider End --------------------------- -->
+    <!-- ================== Navigation End =================== -->
+
+    <!-- ======================= Service Section Start ============================== -->
+
+
+    
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+    <script>
+      var TIMEOUT = 6000;
+      var interval = setInterval(handleNext, TIMEOUT);
+
+      function handleNext() {
+
+        var $radios = $('input[class*="slide-radio"]');
+        var $activeRadio = $('input[class*="slide-radio"]:checked');
+
+        var currentIndex = $activeRadio.index();
+        var radiosLength = $radios.length;
+
+        $radios.attr('checked', false);
+
+        if (currentIndex >= radiosLength - 1) {
+          $radios.first().attr('checked', true);
+        }
+        else {
+          $activeRadio.next('input[class*="slide-radio"]').attr('checked', true);
+        }
+      }
+    </script>
+</body>
+
+</html>
