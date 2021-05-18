@@ -1,51 +1,51 @@
 /* ======================== CSS Reset ======================== */
 *{
-    margin : 0;
-    padding: 0;
-    outline : none;
-    box-sizing: border-box;
-    font-family : "Raleway-Regular";
-    scroll-behavior: smooth;
+  margin : 0;
+  padding: 0;
+  outline : none;
+  box-sizing: border-box;
+  font-family : "Raleway-Regular";
+  scroll-behavior: smooth;
 }
 
 body {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-  }
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 
 p{
-    font-family : "Raleway-Medium";
-    font-size : 1.4rem;
-    line-height: 2.3rem;
-    word-spacing: 0.5rem;
+  font-family : "Raleway-Medium";
+  font-size : 1.4rem;
+  line-height: 2.3rem;
+  word-spacing: 0.5rem;
 }
 
 seciton{
-  padding : 100px;
+padding : 100px;
 }
 /* ============================================================ */
 
 
 /* ======================== FONTS ======================== */
 @font-face{
-    font-family : "Raleway-Regular";
-    src : url('../Fonts/Raleway/static/Raleway-Regular.ttf');
+  font-family : "Raleway-Regular";
+  src : url('../Fonts/Raleway/static/Raleway-Regular.ttf');
 }
 
 @font-face{
-    font-family : "Raleway-Medium";
-    src : url('../Fonts/Raleway/static/Raleway-Medium.ttf');
+  font-family : "Raleway-Medium";
+  src : url('../Fonts/Raleway/static/Raleway-Medium.ttf');
 }
 
 @font-face{
-    font-family : "RocknRollOne-Regular";
-    src : url('../Fonts/RocknRoll_One/RocknRollOne-Regular.ttf');
+  font-family : "RocknRollOne-Regular";
+  src : url('../Fonts/RocknRoll_One/RocknRollOne-Regular.ttf');
 }
 
 @font-face{
-    font-family : "Lobster";
-    src : url('../Fonts/Lobster/Lobster-Regular.ttf');
+  font-family : "Lobster";
+  src : url('../Fonts/Lobster/Lobster-Regular.ttf');
 }
 /* ============================================================ */
 
@@ -53,451 +53,473 @@ seciton{
 
 /* =================== Utility Classes Start ================== */
 .flex{
-    display : flex;
+  display : flex;
 }
 
 .items-center{
-    align-items : center;
+  align-items : center;
 }
 
 .justify-between{
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .justify-center{
-    justify-content: center;
+  justify-content: center;
 }
 
 .justify-around{
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .flex-col{
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .wrap{
-  flex-wrap : wrap;
+flex-wrap : wrap;
 }
 /* =================== Utility Classes End ================== */
 
 
 /* ====================== Navbar Start ====================== */
 .navigation {
-    position: absolute;
-    width: 100%;
-    height: 100px;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  padding: 0 50px;
+  z-index: 1;
+  box-shadow : 0px 0px 15px rgb(44, 44, 44);
+}
+
+.navigation-left{
+    min-width : 190px;
+    height : 30px;
+    position: relative;
+}
+
+.navigation-left a img{
+  position : absolute;
+  height : 100%;
+  width : 100%;
+}
+
+.navigation-right a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333745;
+  font-size: .9rem;
+  font-weight: bold;
+  font-family : "RocknRollOne-Regular";
+  padding : 5px 10px;
+  border: 2px solid transparent;
+  border-radius: 0px 15px;
+  text-align: center;
+  line-height: 25px;
+  transition: all .3s;
+}
+
+.navigation-right a:hover,
+.navigation-right a:focus {
+  border-color: rgb(234, 46, 73);
+}
+
+.navigation .nav-img{
+  outline : none;
+  display: none;
+}
+
+.sm-nav{
+  width : 100%;
+  height : 80%;
+  top : 100px;
+  z-index: 2;
+  background : rgba(120, 245, 18, 0.835);
+  position : absolute;
+  padding : 20px;
+  transition: all 1s;
+  transform : translateX(100%);
+  opacity : 0;
+}
+
+.nav-transition{
+  transform : translateX(0%);
+  opacity : 1;
+}
+
+.sm-nav.navigation-right a{
+  width : 100px;
+}
+
+/* ======================= Navigation Ends ====================*/
+
+
+/* ==================== Slider Start ===================== */  
+/* Slider wrapper*/
+.slider-wrapper {
+  display: block;
+  background: #FFF;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Slider */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  z-index: 0;
+  flex-wrap: wrap;
+  transition: transform 1600ms;
+  -webkit-transition: -webkit-transform 1600ms;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  padding : 100px;
+}
+
+.slider .slider-content {
+  width: 60%;
+  padding : 50px 20px;
+}
+
+.slider .img-wrapper{
+  width : 250px;
+  height : 250px;
+  position : relative;
+  margin : 20px auto;
+}
+
+
+/* Slides Background Color */
+.slide-1 {
+  background: #f3c3b7;
+  left: 0;
+}
+.slide-2 {
+  background: #eb8d576e;
+  left: 100%
+}
+.slide-3 {
+  background: #96b7eca6;
+  left: 200%
+}
+.slide-4 {
+  background: #c9b59e7c;
+  left: 300%;
+}  
+
+/* Slider Inner Slide Effect */
+.slider h2 {
+  font-family : 'Lobster';
+  color: #333333;
+  font-size: 55px;
+  line-height: 1.2;
+  opacity: 0;
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+  letter-spacing: 2px;
+  margin-bottom : 20px;
+  width: 100%;
+}
+
+.slider h4 {
+  font-size: 20px;
+  font-family : "Raleway-Medium";
+  color: rgba(51, 51, 51, 0.349);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.3;
+  opacity: 0;
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+}
+
+.slider .img-wrapper img {
+  position : absolute;
+  height : 100%;
+  opacity: 0;
+  -webkit-transform: translateX(500px);
+  transform: translateX(500px);
+  float : right;
+}
+
+.slider-btn {
+  background-color: #ea2e49;
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  font-family: 'Raleway-Medium';
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all .3s;
+  margin : 25px 0px 10px;
+}
+
+.slider-btn:hover {
+  box-shadow: 0px 0px 60px -17px rgba(51,51,51,1);
+  background : transparent;
+  color : black;
+
+}
+
+/* Animations */
+.slider h2 {
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+  transition: transform 800ms, opacity 800ms;
+  -webkit-transition-delay: 1s; /* Safari */
+  transition-delay: 1s;
+}
+.slider h4 {
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+  transition: transform 800ms, opacity 800ms;
+  -webkit-transition-delay: 1.4s; /* Safari */
+  transition-delay: 1.4s;
+}
+.slider .img-wrapper img {
+  -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+  transition: transform 800ms, opacity 800ms;
+  -webkit-transition-delay: 1.2s; /* Safari */
+  transition-delay: 1.2s;
+}
+
+/* Slider Pagger */
+.slider-pagination {
+  position: absolute;
+  bottom: 30px;
+  width: 575px;
+  left: 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.slider-pagination label {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Slider Pagger Event */
+.slide-radio1:checked ~ .slider-pagination .page1,
+.slide-radio2:checked ~ .slider-pagination .page2,
+.slide-radio3:checked ~ .slider-pagination .page3,
+.slide-radio4:checked ~ .slider-pagination .page4 {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ea2e49;
+  background: transparent;
+}
+
+/* Slider Slide Effect */
+.slide-radio1:checked ~ .slider {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.slide-radio2:checked ~ .slider {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.slide-radio3:checked ~ .slider {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+.slide-radio4:checked ~ .slider {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+
+.slide-radio1:checked ~ .slide-1 h2,
+.slide-radio2:checked ~ .slide-2 h2,
+.slide-radio3:checked ~ .slide-3 h2,
+.slide-radio4:checked ~ .slide-4 h2,
+.slide-radio1:checked ~ .slide-1 h4,
+.slide-radio2:checked ~ .slide-2 h4,
+.slide-radio3:checked ~ .slide-3 h4,
+.slide-radio4:checked ~ .slide-4 h4,
+.slide-radio1:checked ~ .slide-1 .img-wrapper img,
+.slide-radio2:checked ~ .slide-2 .img-wrapper img,
+.slide-radio3:checked ~ .slide-3 .img-wrapper img,
+.slide-radio4:checked ~ .slide-4 .img-wrapper img {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1
+}
+/* ======================Slider End ========================== */
+
+
+/* ========================== Service Section Start ============================= */
+
+
+
+/* ========================== Service Section End ============================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+
+/* =================== Media Query for Navigation Start ======================= */
+@media only screen and (max-width: 1020px) {
+  .navigation {
+    padding: 0 20px;
+  }
+
+  .slider {
+    padding : 150px 50px 50px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .navigation .navigation-right a{
+    padding : 5px;
+  }
+
+  .slider h2 {
+    font-size: 50px;
+  }
+
+  .slider h4 {
+    font-size: 18px;
+  }
+
+  .slider-pagination{
+    bottom : 20px;
+  }
+
+}
+
+@media only screen and (max-width: 875px) {
+  .navigation{
+    padding : 0px 50px;
+  }
+
+  .slider h2 {
+    font-size: 45px;
+  }
+
+  .slider h4 {
+    font-size: 16px;
+  }
+
+  .slider-content {
     padding: 0 50px;
-    z-index: 1;
-    box-shadow : 0px 0px 15px rgb(44, 44, 44);
+    width : 50%;
   }
 
-  .navigation-left{
-      min-width : 190px;
-      height : 30px;
-      position: relative;
-  }
-
-  .navigation-left a img{
-    position : absolute;
-    height : 100%;
-    width : 100%;
-  }
-
-  .navigation .navigation-right a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #333745;
-    font-size: .9rem;
-    font-weight: bold;
-    font-family : "RocknRollOne-Regular";
-    padding : 5px 10px;
-    border: 2px solid transparent;
-    border-radius: 0px 15px;
-    text-align: center;
-    line-height: 25px;
-    transition: all .3s;
-  }
-  
-  .navigation .navigation-right a:hover,
-  .navigation .navigation-right a:focus {
-    border-color: rgb(234, 46, 73);
-  }
-
-  .navigation .nav-img{
-    outline : none;
+  .navigation-right{
     display: none;
   }
 
   .sm-nav{
-    width : 100%;
-    height : 100%;
+    display: flex;
   }
-  /* ======================= Navigation Ends ====================*/
 
+  .navigation .nav-img{
+    display : block;
+  }
 
-  /* ==================== Slider Start ===================== */  
-  /* Slider wrapper*/
-.slider-wrapper {
-    display: block;
-    background: #FFF;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  .slider-pagination {
+    left: 8%;
   }
-  
-  /* Slider */
-  .slider {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 1;
-    z-index: 0;
-    flex-wrap: wrap;
-    transition: transform 1600ms;
-    -webkit-transition: -webkit-transform 1600ms;
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    padding : 100px;
-  }
-  
-  .slider .slider-content {
-    width: 60%;
-    padding : 50px 20px;
+
+  .slider .slider-btn {
+    padding: 0 15px;
+    width: 175px;
+    height: 42px;
   }
 
   .slider .img-wrapper{
-    width : 250px;
-    height : 250px;
-    position : relative;
-    margin : 20px auto;
+    right: 1%;
+  ]
+}
+
+@media only screen and (max-width: 725px) {
+
+  .slider .slider-content{
+    padding : 0px 20px;
+    width : 100%;
   }
 
-  
-  /* Slides Background Color */
-  .slide-1 {
-    background: #f3c3b7;
-    left: 0;
+  .slider .img-wrapper{
+    display : none;
   }
-  .slide-2 {
-    background: #eb8d576e;
-    left: 100%
-  }
-  .slide-3 {
-    background: #96b7eca6;
-    left: 200%
-  }
-  .slide-4 {
-    background: #c9b59e7c;
-    left: 300%;
-  }  
-  
-  /* Slider Inner Slide Effect */
-  .slider h2 {
-    font-family : 'Lobster';
-    color: #333333;
-    font-size: 55px;
-    line-height: 1.2;
-    opacity: 0;
-    -webkit-transform: translateX(500px);
-    transform: translateX(500px);
-    letter-spacing: 2px;
-    margin-bottom : 20px;
-    width: 100%;
-  }
-  
-  .slider h4 {
-    font-size: 20px;
-    font-family : "Raleway-Medium";
-    color: rgba(51, 51, 51, 0.349);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.3;
-    opacity: 0;
-    -webkit-transform: translateX(500px);
-    transform: translateX(500px);
+}
+
+@media only screen and (max-width: 400px) {
+
+  .navigation{
+    padding : 0 25px;
   }
 
-  .slider .img-wrapper img {
-    position : absolute;
-    height : 100%;
-    opacity: 0;
-    -webkit-transform: translateX(500px);
-    transform: translateX(500px);
-    float : right;
+  .slider {
+    padding : 150px 20px 20px;
   }
-  
-  .slider-btn {
-    background-color: #ea2e49;
-    width: 220px;
-    height: 50px;
-    border-radius: 30px;
-    border: none;
-    font-family: 'Raleway-Medium';
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    transition: all .3s;
-    margin : 25px 0px 10px;
-  }
-  
-  .slider-btn:hover {
-    box-shadow: 0px 0px 60px -17px rgba(51,51,51,1);
-    background : transparent;
-    color : black;
-    
-  }
-  
-  /* Animations */
-  .slider h2 {
-    -webkit-transition: opacity 800ms, -webkit-transform 800ms;
-    transition: transform 800ms, opacity 800ms;
-    -webkit-transition-delay: 1s; /* Safari */
-    transition-delay: 1s;
-  }
-  .slider h4 {
-    -webkit-transition: opacity 800ms, -webkit-transform 800ms;
-    transition: transform 800ms, opacity 800ms;
-    -webkit-transition-delay: 1.4s; /* Safari */
-    transition-delay: 1.4s;
-  }
-  .slider .img-wrapper img {
-    -webkit-transition: opacity 800ms, -webkit-transform 800ms;
-    transition: transform 800ms, opacity 800ms;
-    -webkit-transition-delay: 1.2s; /* Safari */
-    transition-delay: 1.2s;
-  }
-  
-  /* Slider Pagger */
-  .slider-pagination {
-    position: absolute;
-    bottom: 30px;
-    width: 575px;
-    left: 100px;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-  }
-  .slider-pagination label {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #fff;
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
-  /* Slider Pagger Event */
-  .slide-radio1:checked ~ .slider-pagination .page1,
-  .slide-radio2:checked ~ .slider-pagination .page2,
-  .slide-radio3:checked ~ .slider-pagination .page3,
-  .slide-radio4:checked ~ .slider-pagination .page4 {
-    width: 14px;
-    height: 14px;
-    border: 2px solid #ea2e49;
-    background: transparent;
-  }
-  
-  /* Slider Slide Effect */
-  .slide-radio1:checked ~ .slider {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
-  .slide-radio2:checked ~ .slider {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  .slide-radio3:checked ~ .slider {
-    -webkit-transform: translateX(-200%);
-    transform: translateX(-200%);
-  }
-  .slide-radio4:checked ~ .slider {
-    -webkit-transform: translateX(-300%);
-    transform: translateX(-300%);
-  }
-  
-  .slide-radio1:checked ~ .slide-1 h2,
-  .slide-radio2:checked ~ .slide-2 h2,
-  .slide-radio3:checked ~ .slide-3 h2,
-  .slide-radio4:checked ~ .slide-4 h2,
-  .slide-radio1:checked ~ .slide-1 h4,
-  .slide-radio2:checked ~ .slide-2 h4,
-  .slide-radio3:checked ~ .slide-3 h4,
-  .slide-radio4:checked ~ .slide-4 h4,
-  .slide-radio1:checked ~ .slide-1 .img-wrapper img,
-  .slide-radio2:checked ~ .slide-2 .img-wrapper img,
-  .slide-radio3:checked ~ .slide-3 .img-wrapper img,
-  .slide-radio4:checked ~ .slide-4 .img-wrapper img {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1
-  }
-  /* ======================Slider End ========================== */
+}
 
 
-  /* ========================== Service Section Start ============================= */
-  
-
-  
-  /* ========================== Service Section End ============================= */
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* Responsive */
-
-  /* =================== Media Query for Navigation Start ======================= */
-  @media only screen and (max-width: 1020px) {
-    .navigation {
-      padding: 0 20px;
-    }
-
-    .slider {
-      padding : 150px 50px 50px;
-    }
-  }
-
-  @media only screen and (max-width: 960px) {
-    .navigation .navigation-right a{
-      padding : 5px;
-    }
-
-    .slider h2 {
-      font-size: 50px;
-    }
-
-    .slider h4 {
-      font-size: 18px;
-    }
-
-    .slider-pagination{
-      bottom : 20px;
-    }
-
-  }
-
-  @media only screen and (max-width: 875px) {
-    .navigation{
-      padding : 0px 50px;
-    }
-
-    .slider h2 {
-      font-size: 45px;
-    }
-
-    .slider h4 {
-      font-size: 16px;
-    }
-
-    .slider-content {
-      padding: 0 50px;
-      width : 50%;
-    }
-  
-    .navigation-right{
-      display: none;
-    }
-
-    .navigation .nav-img{
-      display : block;
-    }
-  
-    .slider-pagination {
-      left: 8%;
-    }
-  
-    .slider .slider-btn {
-      padding: 0 15px;
-      width: 175px;
-      height: 42px;
-    }
-  
-    .slider .img-wrapper{
-      right: 1%;
-    ]
-  }
-  
-  @media only screen and (max-width: 725px) {
-
-    .slider .slider-content{
-      padding : 0px 20px;
-      width : 100%;
-    }
-
-    .slider .img-wrapper{
-      display : none;
-    }
-  }
-
-  @media only screen and (max-width: 400px) {
-
-    .navigation{
-      padding : 0 25px;
-    }
-
-    .slider {
-      padding : 150px 20px 20px;
-    }
-  }
-
-
-  /* ========================== Media Query for Navigation End ========================== */
+/* ========================== Media Query for Navigation End ========================== */

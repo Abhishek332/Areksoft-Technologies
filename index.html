@@ -27,9 +27,20 @@
       <a href="#">Support</a>
     </div>
 
-    <div class="nav-img">
+    <div class="nav-img" onclick="toggle()">
       <img src="Images/logo/menu-btn.png" alt="">
     </div>
+  </div>
+
+  <div class="sm-nav navigation-right flex flex-col items-center justify-between">
+    <a href="#" onclick='toggle()'>Home</a>
+    <a href="#" onclick='toggle()'>About</a>
+    <a href="#" onclick='toggle()'>Product</a>
+    <a href="#" onclick='toggle()'>Service</a>
+    <a href="#" onclick='toggle()'>Works</a>
+    <a href="#" onclick='toggle()'>Training</a>
+    <a href="#" onclick='toggle()'>Contact</a>
+    <a href="#" onclick='toggle()'>Support</a>
   </div>
 
   <!-- ------------------Navigation Slider Start --------------------->
@@ -102,7 +113,7 @@
     <!-- ======================= Service Section Start ============================== -->
 
 
-    
+
 
 
 
@@ -131,6 +142,13 @@
         else {
           $activeRadio.next('input[class*="slide-radio"]').attr('checked', true);
         }
+      }
+    </script>
+
+    <script>
+      var sm_nav = document.querySelector('.sm-nav');
+      function toggle(){
+        sm_nav.classList.toggle('nav-transition');
       }
     </script>
 </body>
