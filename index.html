@@ -32,15 +32,17 @@
     </div>
   </div>
 
-  <div class="sm-nav navigation-right flex flex-col items-center justify-between">
-    <a href="#" onclick='toggle()'>Home</a>
-    <a href="#" onclick='toggle()'>About</a>
-    <a href="#" onclick='toggle()'>Product</a>
-    <a href="#" onclick='toggle()'>Service</a>
-    <a href="#" onclick='toggle()'>Works</a>
-    <a href="#" onclick='toggle()'>Training</a>
-    <a href="#" onclick='toggle()'>Contact</a>
-    <a href="#" onclick='toggle()'>Support</a>
+  <div class="sm-wrapper">
+    <div class="sm-nav navigation-right flex flex-col items-center justify-between">
+      <a href="#" onclick='toggle()'>Home</a>
+      <a href="#" onclick='toggle()'>About</a>
+      <a href="#" onclick='toggle()'>Product</a>
+      <a href="#" onclick='toggle()'>Service</a>
+      <a href="#" onclick='toggle()'>Works</a>
+      <a href="#" onclick='toggle()'>Training</a>
+      <a href="#" onclick='toggle()'>Contact</a>
+      <a href="#" onclick='toggle()'>Support</a>
+    </div>
   </div>
 
   <!-- ------------------Navigation Slider Start --------------------->
@@ -106,51 +108,56 @@
         <img src="Images/img4.png" alt="">
       </div>
     </div>
+  </div>
 
-    <!-- ----------------------- Navigation Slider End --------------------------- -->
-    <!-- ================== Navigation End =================== -->
+  <!-- ----------------------- Navigation Slider End --------------------------- -->
+  <!-- ========================== Navigation End ===================================== -->
 
-    <!-- ======================= Service Section Start ============================== -->
-
-
-
-
-
-
-
+  <!-- ======================= Service Section Start ============================== -->
+  <section class="services">
+    <h1>Services We Offer</h1>
+  </section>
+  <!-- ======================= Service Section End ============================== -->
 
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-    <script>
-      var TIMEOUT = 6000;
-      var interval = setInterval(handleNext, TIMEOUT);
 
-      function handleNext() {
 
-        var $radios = $('input[class*="slide-radio"]');
-        var $activeRadio = $('input[class*="slide-radio"]:checked');
 
-        var currentIndex = $activeRadio.index();
-        var radiosLength = $radios.length;
 
-        $radios.attr('checked', false);
 
-        if (currentIndex >= radiosLength - 1) {
-          $radios.first().attr('checked', true);
-        }
-        else {
-          $activeRadio.next('input[class*="slide-radio"]').attr('checked', true);
-        }
+
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+  <script>
+    var TIMEOUT = 6000;
+    var interval = setInterval(handleNext, TIMEOUT);
+
+    function handleNext() {
+
+      var $radios = $('input[class*="slide-radio"]');
+      var $activeRadio = $('input[class*="slide-radio"]:checked');
+
+      var currentIndex = $activeRadio.index();
+      var radiosLength = $radios.length;
+
+      $radios.attr('checked', false);
+
+      if (currentIndex >= radiosLength - 1) {
+        $radios.first().attr('checked', true);
       }
-    </script>
-
-    <script>
-      var sm_nav = document.querySelector('.sm-nav');
-      function toggle(){
-        sm_nav.classList.toggle('nav-transition');
+      else {
+        $activeRadio.next('input[class*="slide-radio"]').attr('checked', true);
       }
-    </script>
+    }
+  </script>
+
+  <script>
+    var sm_nav = document.querySelector('.sm-nav');
+    function toggle() {
+      sm_nav.classList.toggle('nav-transition');
+    }
+  </script>
 </body>
 
 </html>
