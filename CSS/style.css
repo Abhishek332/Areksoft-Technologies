@@ -15,7 +15,7 @@ body{
 p{
   font-family : "Raleway-Medium";
   font-size : 1.3rem;
-  line-height: 2.1rem;
+  line-height: 2rem;
   word-spacing: 0.3rem;
   text-align: center;
 }
@@ -408,10 +408,8 @@ section.services{
 }
 
 section.services .card-container .service-card{
-  width : 250px;
-  height : 250px;
-  min-height: 200px;
-  min-width : 200px;
+  min-width : 250px;
+  min-height : 250px;
   background : radial-gradient(white, rgb(243, 243, 201), rgb(236, 236, 128));
   box-shadow: 0px 0px 8px 2px black;
   transition : all .3s linear;
@@ -429,6 +427,27 @@ section.services .card-container .service-card{
   box-shadow: inherit;
 }
 
+
+.service-card .wrapper1{
+  background-color: inherit;
+  opacity : 1;
+}
+
+.service-card .wrapper2{
+  background : radial-gradient(rgb(19, 255, 204), rgba(18, 197, 241, 0.972));
+  color : white;
+  text-shadow: 2px 2px 2px black;
+  position : absolute;
+  width : 100%;
+  height : 100%;
+  opacity : 0;
+  transform: translateX(30%) translateY(30%);
+}
+
+.service-card .wrapper2 h2{
+  color :rgb(236, 236, 128);
+}
+
 .service-card:hover .wrapper1{
   opacity : 0;
 }
@@ -438,14 +457,17 @@ section.services .card-container .service-card{
   transform : translateY(0%) translateX(0%);
 }
 
+.service-card:hover .wrapper2 p{
+  padding : 0 18px;
+}
+
 .card-wrapper .card-content{
   transform : rotate(-45deg);
 }
 
-
 .service-card .card-wrapper .card-content .img-wrapper{
-  height : 100px;
-  width: 100px;
+  height : 70px;
+  width: 70px;
   position : relative;
   border-radius: 50%;
   background-color: white;
@@ -459,25 +481,10 @@ section.services .card-container .service-card{
   width : 50%;
 }
 
-.service-card .wrapper1{
-  background-color: inherit;
-  opacity : 1;
-}
-
-.service-card .wrapper2{
-  background : radial-gradient(rgba(7, 7, 149, 0.424), rgba(33, 33, 248, 0.424));
-  color : white;
-  text-shadow: 1px 1px 2px black;
-  position : absolute;
-  width : 100%;
-  height : 100%;
-  opacity : 0;
-  transform: translateX(30%) translateY(30%);
-}
-
 .service-card h2{
   font-family : "RocknRollOne-Regular";
   text-align : center;
+  width : 200px;
 }
 /* ========================== Service Section End ============================= */
 
@@ -632,6 +639,10 @@ section.services .card-container .service-card{
 
   .slider {
     padding : 150px 20px 20px;
+  }
+
+  section.services .card-container .service-card{
+    transform: rotate(45deg) scale(0.9);
   }
 }
 
