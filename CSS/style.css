@@ -419,9 +419,9 @@ flex-wrap : wrap;
     border-radius : 50% 10%;
     text-align : center;
     box-shadow : 5px 5px 4px black;
-    positoin : relative;
+    transition: 5s;
   }
-  
+
   section.advantages .card-container .card h2{
     font-family : "RocknRollOne-Regular";
     font-weight : 100;
@@ -440,15 +440,15 @@ flex-wrap : wrap;
   }
 
   section.advantages .card-container .card.card1:hover{
-    background : radial-gradient(rgba(74, 55, 241, 0.5), rgb(78, 29, 255));
+    background : radial-gradient(rgba(132, 121, 235, 0.356), rgba(61, 10, 245, 0.603));
   }
 
   section.advantages .card-container .card.card2:hover{
-    background : radial-gradient(rgba(241, 57, 57, 0.596), rgb(250, 62, 28));
+    background : radial-gradient(rgba(233, 119, 119, 0.726), rgba(221, 43, 11, 0.835));
   }
 
   section.advantages .card-container .card.card3:hover{
-    background : radial-gradient(rgba(103, 241, 23, 0.5), rgb(100, 251, 0));
+    background : radial-gradient(rgba(103, 241, 23, 0.5), rgba(100, 251, 0, 0.856));
   }
 
 
