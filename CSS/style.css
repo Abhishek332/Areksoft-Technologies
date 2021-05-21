@@ -27,14 +27,14 @@ width : 100%;
 
 section h1{
   font-family : 'Pattaya';
-  font-size : 50px;
-  color : rgb(36, 206, 183);
+  font-size : 3rem;
+  color : rgb(36, 248, 220);
   font-weight : bold;
   text-align : center;
   letter-spacing : 4px;
   word-spacing: 3px;
   text-shadow : 0.2rem 0.2rem 0.1rem rgb(20, 20, 17);
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 section h1 span{
@@ -401,6 +401,62 @@ flex-wrap : wrap;
 
 
 
+/* ============================= Advantages Section Start ========================= */
+  section.advantages > p{
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding : 0px 20px;
+    color : rgb(230, 1, 39);
+  }
+
+  section.advantages .card-container .card{
+    width : 400px;
+    min-height : 300px;
+    min-width : 320px;
+    border : 3px solid black;
+    margin : 30px;
+    padding : 0 25px;
+    border-radius : 50% 10%;
+    text-align : center;
+    box-shadow : 5px 5px 4px black;
+    positoin : relative;
+  }
+  
+  section.advantages .card-container .card h2{
+    font-family : "RocknRollOne-Regular";
+    font-weight : 100;
+    margin : 10px 5px;
+    transition: 0.3s;
+  }
+
+  section.advantages .card-container .card:hover p{
+    color : white;
+    text-shadow: 0px 2px 3px black;
+  }
+
+  section.advantages .card-container .card:hover h2{
+    color : yellow;
+    text-shadow: 0px 2px 5px black;
+  }
+
+  section.advantages .card-container .card.card1:hover{
+    background : radial-gradient(rgba(74, 55, 241, 0.5), rgb(78, 29, 255));
+  }
+
+  section.advantages .card-container .card.card2:hover{
+    background : radial-gradient(rgba(241, 57, 57, 0.596), rgb(250, 62, 28));
+  }
+
+  section.advantages .card-container .card.card3:hover{
+    background : radial-gradient(rgba(103, 241, 23, 0.5), rgb(100, 251, 0));
+  }
+
+
+/* ============================= Advantages Section End ========================= */
+
+
+
+
 /* ========================== Service Section Start ============================= */
 
 section.services{
@@ -487,9 +543,6 @@ section.services .card-container .service-card{
   width : 200px;
 }
 /* ========================== Service Section End ============================= */
-
-
-
 
 
 
@@ -642,7 +695,7 @@ section.services .card-container .service-card{
   }
 
   section.services .card-container .service-card{
-    transform: rotate(45deg) scale(0.9);
+    transform: rotate(45deg) scale(0.8);
   }
 }
 
